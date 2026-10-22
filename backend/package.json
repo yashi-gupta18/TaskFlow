@@ -1,0 +1,21 @@
+{
+  "name": "taskflow-backend",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "engines": { "node": ">=22.12.0" },
+  "scripts": {
+    "start": "node --env-file-if-exists=.env src/server.js",
+    "dev": "node --env-file-if-exists=.env --watch src/server.js",
+    "test": "node --test",
+    "check": "node --check src/server.js && node --check src/app.js && node --check src/routes/tasks.js && node --check src/models/Task.js && node --check src/config/db.js"
+  },
+  "dependencies": {
+    "express": "^5.1.0",
+    "mongoose": "^8.19.0"
+  },
+  "devDependencies": {
+    "mongodb-memory-server-core": "^10.2.0",
+    "supertest": "^7.1.0"
+  }
+}
